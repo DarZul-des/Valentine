@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffe6e6;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #b30000;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .yes-btn {
+            background-color: green;
+            color: white;
+        }
+
+        .no-btn {
+            background-color: red;
+            color: white;
+            position: absolute;
+        }
+
+        .cute-img {
+            width: 150px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my Valentine Ayar??</h1>
+    <div class="buttons">
+        <button class="yes-btn" onclick="confirmValentine()">Yes</button>
+        <button class="oo-btn" id="noButton" onmouseover="moveNoButton()">Are you positive?</button>
+    </div>
+    <img class="cute-img" src="https://i.pinimg.com/236x/4a/d1/d7/4ad1d7e96db59ba5d480718deb112a04.jpg" alt="Cute Cat">
+
+    <script>
+        function confirmValentine() {
+            alert("Yay! You are my Valentine! ❤️");
+        }
+
+        function moveNoButton() {
+            let noButton = document.getElementById("noButton");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            noButton.style.left = x + "px";
+            noButton.style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
